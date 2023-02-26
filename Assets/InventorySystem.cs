@@ -48,11 +48,18 @@ public class InventorySystem : MonoBehaviour
         quantity_text = inventoryButton.transform.Find("quantity_text").GetComponent<TextMeshProUGUI>();
         quantity_text.text = UnityEngine.Random.Range(1, 9).ToString();
         inventoryButton.onClick.AddListener(OnPressAcorn);
+
+        inventoryButton = transform.Find("Viewport").Find("Content").Find("ShopButton").GetComponent<Button>();
+        inventoryButton.onClick.AddListener(OnPressShop);
     }
 
+    void OnPressShop()
+    {
+        ShopManager.shopActive = true;
+    }
     void OnPressAcorn()
     {
-        if (SceneManager.GetActiveScene().name == "interaction_scene")
+        //if (SceneManager.GetActiveScene().name == "interaction_scene")
         {
             Button inventoryButton = transform.Find("Viewport").Find("Content").Find("AcornButton").GetComponent<Button>();
             TextMeshProUGUI quantity_text = inventoryButton.transform.Find("quantity_text").GetComponent<TextMeshProUGUI>();
@@ -74,7 +81,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("street", cursor.position, true);
+                SpawnTree("street", cursor.position, true, 1);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }
@@ -89,7 +96,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("palm", cursor.position, true);
+                SpawnTree("palm", cursor.position, true, 1);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }
@@ -104,7 +111,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("pine", cursor.position, true);
+                SpawnTree("pine", cursor.position, true, 2);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }
@@ -120,7 +127,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("fir", cursor.position, true);
+                SpawnTree("fir", cursor.position, true, 3);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }
@@ -136,7 +143,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("oak", cursor.position, true);
+                SpawnTree("oak", cursor.position, true, 4);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }
@@ -152,7 +159,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("poplar", cursor.position, true);
+                SpawnTree("poplar", cursor.position, true, 5);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }
@@ -169,7 +176,7 @@ public class InventorySystem : MonoBehaviour
     //public Mapbox.Unity.Location.EditorLocationProviderLocationLog script;
     //public TreeDataManager script;
 
-    public GameObject SpawnTree(string tree_type, Vector3 location, bool fromSeed)
+    public GameObject SpawnTree(string tree_type, Vector3 location, bool fromSeed, float price)
     {
         //print("spawnTree: " + tree_type + " " + location + " " + fromSeed);
         //Vector2d current_player_latlong = new Vector2d(LocationProvider.GetComponent<LocationInfo>().latitude, LocationProvider.GetComponent<LocationInfo>().longitude);//Mapbox.Unity.Location.AbstractLocationProvider._currentLocation;// EditorLocationProviderLocationLog.current_player_latlong;
@@ -207,11 +214,11 @@ public class InventorySystem : MonoBehaviour
             new_tree = GameObject.Instantiate(street_tree_prefab);
         }
         new_tree.transform.SetPositionAndRotation(location, cursor.rotation * Quaternion.Euler(0, 0, 0));
-        new_tree.transform.localScale -= new Vector3(0.9f, 0.9f, 0.9f);
+        new_tree.transform.localScale -= new Vector3(0.95f, 0.95f, 0.95f);
 
         if (fromSeed == true)
         {
-            TreeDataManager.all_trees.Add(new TreeDatum(tree_type, latlong, 0.0f, 1.0f));
+            TreeDataManager.all_trees.Add(new TreeDatum(tree_type, latlong, 0.0f, price));
         }
         //print(latlong);
         print(TreeDataManager.all_trees.Count);

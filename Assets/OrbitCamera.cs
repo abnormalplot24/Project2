@@ -67,7 +67,7 @@ public class OrbitCamera : MonoBehaviour
                 h *= -1;
             }
             
-            offset = new Vector3(50 * Mathf.Cos(t), curr_position.y + h, 50 * Mathf.Sin(t));
+            offset = new Vector3(30 * Mathf.Cos(t), curr_position.y + h, 30 * Mathf.Sin(t));
         }
         
         // 

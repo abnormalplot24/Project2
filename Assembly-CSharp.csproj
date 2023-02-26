@@ -94,10 +94,11 @@
     <Compile Include="Assets\other\Mapbox\Unity\Location\LocationProviderFactory.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Data\MeshData.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Map\Interfaces\IMapScalingStrategy.cs" />
+    <Compile Include="Assets\SpawnCloseTree.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Utilities\SingletonScriptableObject.cs" />
     <Compile Include="Assets\other\Mapbox\Examples\8_VoxelMap\Scripts\VoxelTile.cs" />
-    <Compile Include="Assets\other\Mapbox\Unity\DataContainers\LocationPrefabCategoryOptions.cs" />
     <Compile Include="Assets\other\Mapbox\Examples\Scripts\FeatureSelectionDetector.cs" />
+    <Compile Include="Assets\other\Mapbox\Unity\DataContainers\LocationPrefabCategoryOptions.cs" />
     <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\Utils\JsonConverters\LonLatToGeoCoordinateConverter.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Map\TileProviders\TileErrorHandler.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Location\LocationArrayEditorLocationProvider.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Assets\other\Mapbox\Examples\Scripts\TrafficUvAnimator.cs" />
     <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\Platform\TileJSON\TileJSONReponse.cs" />
     <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\Platform\IAsyncRequest.cs" />
+    <Compile Include="Assets\RaycastMouse.cs" />
     <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\MapMatching\MapMatchingParameters.cs" />
     <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\Map\TileCover.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Factories\AbstractTileFactory.cs" />
@@ -161,8 +163,8 @@
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Data\KdTree\DistanceFunctions.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\SourceLayers\ImageryLayer.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\SourceLayers\TerrainLayer.cs" />
-    <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\MapMatching\Tracepoint.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Modifiers\ModifierStack.cs" />
+    <Compile Include="Assets\other\Mapbox\Core\mapbox-sdk-cs\MapMatching\Tracepoint.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Modifiers\GameObjectModifiers\AddMonoBehavioursModifierType.cs" />
     <Compile Include="Assets\ImageBonus.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Factories\TerrainStrategies\TerrainStrategy.cs" />
@@ -184,8 +186,8 @@
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Data\KdTree\IntervalHeap.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\SourceLayers\ISubLayerColliderOptions.cs" />
     <Compile Include="Assets\DisplayInfo.cs" />
-    <Compile Include="Assets\other\Mapbox\Examples\Scripts\ChangeShadowDistance.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Utilities\HTTPRequest.cs" />
+    <Compile Include="Assets\other\Mapbox\Examples\Scripts\ChangeShadowDistance.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\DataContainers\RangeAroundTransformTileProviderOptions.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Location\DeviceLocationProvider.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\SourceLayers\MapboxDefaultImagery.cs" />
@@ -261,11 +263,11 @@
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Components\VertexDebugger.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Filters\HeightFilter.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Modifiers\IReplacementCriteria.cs" />
-    <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Modifiers\MergedModifierStack.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\DataContainers\GeometryMaterialOptions.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\SourceLayers\ISubLayerDarkStyle.cs" />
     <Compile Include="Assets\other\Mapbox\Examples\Scripts\DragableDirectionWaypoint.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\DataContainers\TerrainSideWallOptions.cs" />
+    <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Modifiers\MergedModifierStack.cs" />
     <Compile Include="Assets\other\demo\components\ARTapToPlaceObject.cs" />
     <Compile Include="Assets\other\Mapbox\Core\Plugins\Android\UniAndroidPermission\UniAndroidPermission.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Utilities\Singleton.cs" />
@@ -370,8 +372,8 @@
     <Compile Include="Assets\other\Mapbox\Unity\Telemetry\TelemetryWebgl.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Modifiers\MeshGenerationBase.cs" />
     <Compile Include="Assets\other\ExampleAssets\Scripts\AnchorCreator.cs" />
-    <Compile Include="Assets\TreeUpdate.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Components\TextureSelector.cs" />
+    <Compile Include="Assets\TreeUpdate.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Map\AbstractMap.cs" />
     <Compile Include="Assets\TreeDataManager.cs" />
     <Compile Include="Assets\other\Mapbox\Core\cheap-ruler-cs\CheapRuler.cs" />
@@ -447,8 +449,7 @@
     <Compile Include="Assets\other\Mapbox\Examples\1_DataExplorer\HighlightBuildings.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\Location\DeviceLocationProviderAndroidNative.cs" />
     <Compile Include="Assets\other\Mapbox\Unity\MeshGeneration\Factories\ImageDataFetcher.cs" />
-    <Compile Include="Assets\RaycastMouse.cs" />
-    <Compile Include="Assets\SpawnCloseTree.cs" />
+    <Compile Include="Assets\ShopManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\other\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -760,20 +761,11 @@
     <Reference Include="Mapbox.IO.Compression">
       <HintPath>Assets\other\Mapbox\Core\Plugins\ThirdParty\Mapbox.IO.Compression\net35\Mapbox.IO.Compression.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapbox.VectorTile.ExtensionMethods">
-      <HintPath>Assets\other\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapbox.VectorTile.PbfReader">
-      <HintPath>Assets\other\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.PbfReader.dll</HintPath>
-    </Reference>
-    <Reference Include="Mapbox.VectorTile.Geometry">
-      <HintPath>Assets\other\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.Geometry.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
@@ -784,6 +776,12 @@
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
+    <Reference Include="Mapbox.VectorTile.ExtensionMethods">
+      <HintPath>Assets\other\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.ExtensionMethods.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.VectorTile.PbfReader">
+      <HintPath>Assets\other\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.PbfReader.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
@@ -792,6 +790,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mapbox.VectorTile.Geometry">
+      <HintPath>Assets\other\Mapbox\Core\Plugins\Mapbox\vector-tile-cs\net46\Mapbox.VectorTile.Geometry.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Unity\2021.3.19f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1225,6 +1226,9 @@
     <Reference Include="Unity.XR.InteractionSubsystems">
       <HintPath>Library\ScriptAssemblies\Unity.XR.InteractionSubsystems.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Collections.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.XR.ARSubsystems.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARSubsystems.Editor.dll</HintPath>
     </Reference>
@@ -1234,8 +1238,14 @@
     <Reference Include="Unity.XR.Management">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.XR.ARCore">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.ARSubsystems">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARSubsystems.dll</HintPath>
@@ -1276,6 +1286,9 @@
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
@@ -1300,11 +1313,20 @@
     <Reference Include="UnityEngine.XR.MagicLeap">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.MagicLeap.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.XR.MagicLeap">
       <HintPath>Library\ScriptAssemblies\UnityEditor.XR.MagicLeap.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Jobs">
+      <HintPath>Library\ScriptAssemblies\Unity.Jobs.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -1338,27 +1360,6 @@
     </Reference>
     <Reference Include="Unity.XR.ARFoundation">
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Collections.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Jobs">
-      <HintPath>Library\ScriptAssemblies\Unity.Jobs.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

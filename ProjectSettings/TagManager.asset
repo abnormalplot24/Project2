@@ -10,6 +10,7 @@ TagManager:
   - Squirrel
   - Tree
   - Landmark
+  - Shop
   layers:
   - Default
   - TransparentFX

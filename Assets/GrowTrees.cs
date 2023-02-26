@@ -40,7 +40,7 @@ public class GrowTrees : MonoBehaviour
     public float growthFactor;
     void Update()
     {
-        if (count > 300.0f)
+        if (count > 200.0f)
         {
             count = 0;
             foreach (TreeDatum tree in TreeDataManager.all_trees)
@@ -57,8 +57,8 @@ public class GrowTrees : MonoBehaviour
                 }
                 else
                 {
-                    MoneyManager mm = GameObject.Find("MoneyManager").GetComponent<MoneyManager>();
-                    mm.IncreaseMoney(tree.revenue_per_tick_adulthood);
+                    //MoneyManager mm = GameObject.Find("MoneyManager").GetComponent<MoneyManager>();
+                    MoneyManager.IncreaseMoney(tree.revenue_per_tick_adulthood);
                 }
             }
         }

@@ -5,7 +5,7 @@ using TMPro;
 
 public class MoneyManager : MonoBehaviour
 {
-    static float currentBalance = 0;
+    public static float currentBalance = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +19,21 @@ public class MoneyManager : MonoBehaviour
     }
     //void UpdateMoneyTick()
 
-    public void IncreaseMoney(float amount)
+    public static void IncreaseMoney(float amount)
     {
         currentBalance += amount;
         //print(currentBalance);
         UpdateText();
     }
 
-    void UpdateText()
+    public static void DecreaseMoney(float amount)
+    {
+        currentBalance -= amount;
+        //print(currentBalance);
+        UpdateText();
+    }
+
+    static void UpdateText()
     {
         TextMeshProUGUI money_text = GameObject.Find("CurrentMoneyText").GetComponent<TextMeshProUGUI>();
         money_text.text = "$" + currentBalance.ToString();

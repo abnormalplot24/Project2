@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 22732923}
   - component: {fileID: 22732922}
   - component: {fileID: 22732921}
-  - component: {fileID: 22732925}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -252,22 +251,6 @@ Transform:
   m_Father: {fileID: 388525031}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &22732925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22732919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5095bfbaaee0c407486d7e37d4be964e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acorn_prefab: {fileID: 7976551930400903722, guid: d7ae7b7a3dd4b420c8fecc8ee71e00d8,
-    type: 3}
-  acorn_launch_velocity: 100
-  offset: {x: -17, y: 0, z: 10}
 --- !u!1 &223974226
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259463331}
   - component: {fileID: 259463330}
+  - component: {fileID: 259463332}
   m_Layer: 0
   m_Name: SpawnTree
   m_TagString: Untagged
@@ -347,6 +331,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &259463332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259463329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5426fdb0da6bf6449f4ddbf9caff151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &276843196
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +429,6 @@ GameObject:
   - component: {fileID: 388525037}
   - component: {fileID: 388525039}
   - component: {fileID: 388525038}
-  - component: {fileID: 388525040}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -567,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9865997564c4f40bd78864f8051159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treePrefab: {fileID: 3953946690385061772, guid: 6be411d786f6edf4ca53c38cf7dc22e2,
+  treePrefab: {fileID: 8215668998387905239, guid: 47d29ffc84b7edb47aa534d3e714dd64,
     type: 3}
 --- !u!114 &388525039
 MonoBehaviour:
@@ -585,18 +580,6 @@ MonoBehaviour:
     type: 2}
   m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
---- !u!114 &388525040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 388525029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5426fdb0da6bf6449f4ddbf9caff151, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &530058716
 GameObject:
   m_ObjectHideFlags: 0

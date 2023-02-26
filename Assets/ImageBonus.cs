@@ -9,6 +9,7 @@ public class ImageBonus : MonoBehaviour
     static bool bonusReceived = false;
     ARTrackedImageManager trackedImageManager;
     public GameObject treePrefab;
+    static GameObject tree;
 
     private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>();
 
@@ -30,10 +31,12 @@ public class ImageBonus : MonoBehaviour
             if(bonusReceived == false)
             {
                 bonusReceived = true;
-                MoneyManager mm = GameObject.Find("MoneyManager").GetComponent<MoneyManager>();
-                mm.IncreaseMoney(100.0f);
+                //MoneyManager mm = GameObject.Find("MoneyManager").GetComponent<MoneyManager>();
+                MoneyManager.IncreaseMoney(100.0f);
             }
+            tree = Instantiate(treePrefab);
             UpdateImage(trackedImage);
+
         }
 
         foreach (var trackedImage in eventArgs.updated)
@@ -45,15 +48,14 @@ public class ImageBonus : MonoBehaviour
         foreach (var trackedImage in eventArgs.removed)
         {
             // Handle removed event
-
+            Object.Destroy(tree);
         }
     }
     void UpdateImage(ARTrackedImage trackedImage)
     {
         Vector3 position = trackedImage.transform.position;
-        GameObject tree = Instantiate(treePrefab);
         tree.transform.position = position;
-        tree.transform.Rotate(90, 0, 0);
-        tree.transform.localScale -= new Vector3(0.9f, 0.9f, 0.9f);
+        //tree.transform.Rotate(90, 0, 0);
+        //tree.transform.localScale -= new Vector3(0.9f, 0.9f, 0.9f);
     }
 }
