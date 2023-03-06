@@ -27,7 +27,9 @@ public class SwitchModeButton : MonoBehaviour
     public GameObject interactionScene;
 
     public static Vector2d currentLocation;
+    public Vector3 small_offset;
     GameObject character;
+    public string what_to_spawn;
 
     public AbstractMap map;
     public void Start()
@@ -63,7 +65,8 @@ public class SwitchModeButton : MonoBehaviour
             map = GameObject.Find("Map").GetComponent<AbstractMap>();
             Vector2d tempLocation = map.WorldToGeoPosition(character.transform.position);
             currentLocation = new Vector2d(tempLocation.x, tempLocation.y);
-            SceneManager.LoadScene("interaction_scene");
+            SpawnSquirrelScene(Squirrel__Object);
+            //SceneManager.LoadScene("interaction_scene");
 
             /*foreach (GameObject Tree in Trees)
             {
@@ -105,7 +108,7 @@ public class SwitchModeButton : MonoBehaviour
 
                 }
             }
-
+            
             foreach (GameObject Squirrel in Squirrels)
             {
                 Vector3 diff = Squirrel.transform.position - playerTarget.transform.position;
@@ -115,7 +118,8 @@ public class SwitchModeButton : MonoBehaviour
                     break;
                 }
 
-            }*/
+            }
+            */
 
 
         }
@@ -123,15 +127,11 @@ public class SwitchModeButton : MonoBehaviour
 
     void SpawnSquirrelScene(GameObject Squirrel)
     {
+        print("DO WE EENDDASFDS uOP HERE");
+        what_to_spawn = "Squirrel";
+
         SceneManager.LoadScene("interaction_scene");
-        GameObject interactiveTree = Instantiate(Squirrel);
-        Vector2d tempLocation = map.WorldToGeoPosition(Squirrel.transform.position);
-        currentLocation = new Vector2d(tempLocation.x, tempLocation.y);
-        GameObject newSquirrel = Instantiate(Squirrel);
-        interactiveTree.transform.position = new Vector3((float)currentLocation.x, (float)currentLocation.y, 0.0f);
-
     }
-
     /*void SpawnTreeScene()
     {
         foreach (GameObject Tree in Trees)

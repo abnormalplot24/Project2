@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Mapbox.Examples
 {
-	public class CharacterMovement : MonoBehaviour
+	/*public class CharacterMovement : MonoBehaviour
 	{
 		public Material[] Materials;
 		public Transform Target;
@@ -41,5 +41,5 @@ namespace Mapbox.Examples
 				CharacterAnimator.SetBool("IsWalking", false);
 			}
 		}
-	}
+	}*/
 }
