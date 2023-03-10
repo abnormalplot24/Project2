@@ -66,7 +66,7 @@
 				current_player_latlong += new Vector2d(movement_speed, 0.0);
 				rotation = Quaternion.Euler(0, 0, 0);
 			}
-			if (Input.GetKey(KeyCode.DownArrow))
+			else if (Input.GetKey(KeyCode.DownArrow))
 			{
 				current_player_latlong += new Vector2d(-movement_speed, 0.0);
 				rotation = Quaternion.Euler(0, 180, 0);
@@ -78,7 +78,7 @@
 				rotation = Quaternion.Euler(0, 90, 0);
 
 			}
-			if (Input.GetKey(KeyCode.LeftArrow))
+			else if (Input.GetKey(KeyCode.LeftArrow))
 			{
 				current_player_latlong += new Vector2d(0.0, -movement_speed);
 				rotation = Quaternion.Euler(0, 270, 0);
