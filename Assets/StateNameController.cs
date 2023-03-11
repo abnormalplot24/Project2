@@ -6,5 +6,6 @@ public class StateNameController : MonoBehaviour
 {
 
     public static GameObject what_to_spawn;
+    public static string what_to_spawn_string;
     public static bool spawn_anything;
 }

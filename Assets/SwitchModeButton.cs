@@ -72,27 +72,34 @@ public class SwitchModeButton : MonoBehaviour
             foreach (GameObject Squirrel in GameObject.FindGameObjectsWithTag("Squirrel"))
             {
                 Vector3 diff = Squirrel.transform.position - character.transform.position;
+                print(diff);
+                print("WE GET HERE???22");
+
                 if (diff.sqrMagnitude < 200.0f)
                 {
                     SpawnSquirrelScene();
                     check_trees = false;
                     no_spawned_object = false;
                     StateNameController.spawn_anything = true;
+                    StateNameController.what_to_spawn_string = "Squirrel";
 
                 }
 
             }
             if (check_trees)
             {
+                print("WE GET HERE???23");
                 foreach (GameObject Tree in GameObject.FindGameObjectsWithTag("Tree"))
                 {
                     Vector3 diff = Tree.transform.position - character.transform.position;
+                    print(diff);
                     if (diff.sqrMagnitude < 200.0f)
                     {
                         print(Tree);
                         SpawnTreeScene(Tree);
                         no_spawned_object = false;
                         StateNameController.spawn_anything = true;
+                        StateNameController.what_to_spawn_string = "Tree";
 
                     }
 
@@ -101,6 +108,9 @@ public class SwitchModeButton : MonoBehaviour
             if (no_spawned_object)
             {
                 SceneManager.LoadScene("interaction_scene");
+                StateNameController.what_to_spawn_string = "Nothing";
+                StateNameController.spawn_anything = false;
+
 
             }
         }
@@ -116,10 +126,8 @@ public class SwitchModeButton : MonoBehaviour
 
     void SpawnTreeScene(GameObject Tree_Specific)
     {
-        Vector2d tempLocation = map.WorldToGeoPosition(Tree_Specific.transform.position);
-        currentLocation = new Vector2d(tempLocation.x, tempLocation.y);
-        GameObject interactiveTree = Instantiate(Tree_Specific);
-        interactiveTree.transform.position = new Vector3((float)currentLocation.x, (float)currentLocation.y, 0.0f);
+        SceneManager.LoadScene("interaction_scene");
+        StateNameController.what_to_spawn = Tree_Specific;
 
     }
 }

@@ -18,11 +18,13 @@ public class Spawner : MonoBehaviour
 
         if (StateNameController.spawn_anything)
         {
+            print("DOO WE GET HEEREE");
             GameObject interactiveTree = Instantiate(StateNameController.what_to_spawn);
             print(StateNameController.what_to_spawn);
             currentLocation = new Vector2d(cursor.transform.position.x, cursor.transform.position.y);
-            interactiveTree.transform.position = new Vector3((float)currentLocation.x, (float)currentLocation.y, 0.0f);
-            interactiveTree.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            interactiveTree.transform.position = new Vector3((float)currentLocation.x, (float)currentLocation.y, 5.0f);
+            interactiveTree.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            interactiveTree.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
         }
     }
 
