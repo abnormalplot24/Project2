@@ -81,7 +81,7 @@ public class InventorySystem : MonoBehaviour
             if (float.Parse(quantity_text.text) > 0)
             {
                 cursor = GameObject.FindGameObjectWithTag("Cursor").transform;
-                SpawnTree("street", cursor.position, true, 1);
+                SpawnTree("street", cursor.position, true, 6);
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
             }

@@ -35,6 +35,7 @@ public class ImageBonus : MonoBehaviour
                 MoneyManager.IncreaseMoney(100.0f);
             }
             tree = Instantiate(treePrefab);
+            tree.transform.Rotate(90, 0, 0);
             UpdateImage(trackedImage);
 
         }

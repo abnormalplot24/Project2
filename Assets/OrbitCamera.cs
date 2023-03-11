@@ -59,8 +59,8 @@ public class OrbitCamera : MonoBehaviour
         {
             //Debug.Log("mouse x value [" + Input.GetAxis("Mouse X") + "]");
             
-            t += Input.GetAxis("Mouse X");
-            h = 10 * Input.GetAxis("Mouse Y");
+            t += Input.GetAxis("Mouse X") * 0.2f;
+            h = 5 * Input.GetAxis("Mouse Y");
             Vector3 curr_position = transform.position;
             if(curr_position.y + h < 30 || curr_position.y + h > 100)
             {
