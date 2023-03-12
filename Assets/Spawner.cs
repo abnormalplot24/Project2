@@ -18,20 +18,22 @@ public class Spawner : MonoBehaviour
     public AudioClip defaultMusic;
     public AudioClip GruntDeath;
     public AudioClip BossDeath;
+    public GameObject arCamera;
+
     // Start is called before the first frame update
     void Start()
     {
 
-        Input.location.Start();
 
+
+
+        // Waits until the location service initializes
 
         // If the service didn't initialize in 20 seconds this cancels location service use.
 
-       
-            // If the connection succeeded, this retrieves the device's current location and displays it in the Console window.
-            print("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 
-
+        // If the connection succeeded, this retrieves the device's current location and displays it in the Console window.
+        print("ARE YOU SEEING THIS???");
         if (StateNameController.spawn_anything)
         {
 
@@ -56,11 +58,9 @@ public class Spawner : MonoBehaviour
 
             }
             interactiveTree = Instantiate(StateNameController.what_to_spawn);
+            interactiveTree.transform.position = new Vector3(arCamera.transform.position.x + 0.0f, arCamera.transform.position.y -3.0f, arCamera.transform.position.z + 18.0f);
+            interactiveTree.transform.rotation = new Quaternion(0.0f, 180.0f,0.0f, 0.0f);
             print(StateNameController.what_to_spawn);
-            currentLocation = new Vector3(cursor.transform.position.x, cursor.transform.position.y, cursor.transform.position.z);
-            interactiveTree.transform.position = new Vector3(Input.location.lastData.latitude, Input.location.lastData.altitude - 3.0f, Input.location.lastData.longitude + 10.0f);
-            interactiveTree.transform.localScale = new Vector3(2.5f, 2.5f, 2.5f);
-            interactiveTree.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
         }
     
 

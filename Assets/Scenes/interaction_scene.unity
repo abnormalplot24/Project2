@@ -571,6 +571,7 @@ MonoBehaviour:
   defaultMusic: {fileID: 8300000, guid: 6db20a2fe40004e6cac27f9384c67ba0, type: 3}
   GruntDeath: {fileID: 8300000, guid: 3fafe7fe840234b11a11d2bfe3706a8f, type: 3}
   BossDeath: {fileID: 8300000, guid: d06ff9386bfd64319bbfc21eb385e32b, type: 3}
+  arCamera: {fileID: 22732919}
 --- !u!82 &530058720
 AudioSource:
   m_ObjectHideFlags: 0

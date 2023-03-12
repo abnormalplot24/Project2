@@ -96,6 +96,7 @@ public class SwitchModeButton : MonoBehaviour
                         StateNameController.spawn_anything = true;
                         StateNameController.what_to_spawn_string = "Squirrel";
 
+
                     }
 
                 }
@@ -120,6 +121,7 @@ public class SwitchModeButton : MonoBehaviour
                 }
                 if (no_spawned_object)
                 {
+
                     SceneManager.LoadScene("interaction_scene");
                     StateNameController.what_to_spawn_string = "Nothing";
                     StateNameController.spawn_anything = false;
@@ -132,6 +134,7 @@ public class SwitchModeButton : MonoBehaviour
 
     void SpawnSquirrelScene()
     {
+
         SceneManager.LoadScene("interaction_scene");
         StateNameController.what_to_spawn = Squirrel__Object;
 
@@ -140,6 +143,7 @@ public class SwitchModeButton : MonoBehaviour
 
     void SpawnTreeScene(GameObject Tree_Specific)
     {
+
         SceneManager.LoadScene("interaction_scene");
         StateNameController.what_to_spawn = Tree_Specific;
 
