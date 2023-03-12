@@ -73,15 +73,15 @@ public class Spawner : MonoBehaviour
 
         if (StateNameController.what_to_spawn_string == "Squirrel" & StateNameController.squirrel_killed == true)
         {
-            GetComponent<AudioSource>().Stop();
-            GetComponent<AudioSource>().PlayOneShot(GruntDeath);
+            GetComponent<AudioSource>().clip = GruntDeath;
+
+            GetComponent<AudioSource>().Play();
 
             GetComponent<AudioSource>().clip = defaultMusic;
             GetComponent<AudioSource>().Play();
         }
         if(StateNameController.what_to_spawn_string == "FinalBoss" & !StateNameController.final_boss_present)
         {
-            GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().PlayOneShot(BossDeath);
 
             GetComponent<AudioSource>().clip = defaultMusic;
