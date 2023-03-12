@@ -93,9 +93,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2247572683917639779}
   - component: {fileID: 6814183670807686664}
+  - component: {fileID: -3628209451901657641}
   m_Layer: 0
   m_Name: acorn no light
-  m_TagString: Untagged
+  m_TagString: acorn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +138,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-3628209451901657641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475821536407984857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2728301175268077482
 GameObject:
   m_ObjectHideFlags: 0

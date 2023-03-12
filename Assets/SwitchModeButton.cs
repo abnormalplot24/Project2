@@ -14,6 +14,8 @@ public class SwitchModeButton : MonoBehaviour
 
     public GameObject Squirrel__Object;
 
+    public GameObject FinalBossObject;
+
     static GameObject gameplay_canvas_instance;
 
     public GameObject switchModeButton;
@@ -60,6 +62,8 @@ public class SwitchModeButton : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "exploration_scene")
         { // exploration to interaction
+            StateNameController.spawn_anything = false;
+
             TextMeshProUGUI text = switchModeButton.transform.Find("Text").GetComponent<TextMeshProUGUI>();
             text.SetText("Explore");
             character = GameObject.Find("PlayerTarget");
@@ -67,51 +71,61 @@ public class SwitchModeButton : MonoBehaviour
             Vector2d tempLocation = map.WorldToGeoPosition(character.transform.position);
             currentLocation = new Vector2d(tempLocation.x, tempLocation.y);
             //SceneManager.LoadScene("interaction_scene");
-
-
-            foreach (GameObject Squirrel in GameObject.FindGameObjectsWithTag("Squirrel"))
+            if (StateNameController.final_boss_present)
             {
-                Vector3 diff = Squirrel.transform.position - character.transform.position;
-                print(diff);
-                print("WE GET HERE???22");
-
-                if (diff.sqrMagnitude < 200.0f)
-                {
-                    SpawnSquirrelScene();
-                    check_trees = false;
-                    no_spawned_object = false;
-                    StateNameController.spawn_anything = true;
-                    StateNameController.what_to_spawn_string = "Squirrel";
-
-                }
-
+                print("DO WE GET HERE");
+                StateNameController.spawn_anything = true;
+                StateNameController.what_to_spawn_string = "FinalBoss";
+                SceneManager.LoadScene("interaction_scene");
+                StateNameController.what_to_spawn = FinalBossObject;
             }
-            if (check_trees)
+            else
             {
-                print("WE GET HERE???23");
-                foreach (GameObject Tree in GameObject.FindGameObjectsWithTag("Tree"))
+
+                foreach (GameObject Squirrel in GameObject.FindGameObjectsWithTag("Squirrel"))
                 {
-                    Vector3 diff = Tree.transform.position - character.transform.position;
+                    Vector3 diff = Squirrel.transform.position - character.transform.position;
                     print(diff);
+                    print("WE GET HERE???22");
+
                     if (diff.sqrMagnitude < 200.0f)
                     {
-                        print(Tree);
-                        SpawnTreeScene(Tree);
+                        SpawnSquirrelScene();
+                        check_trees = false;
                         no_spawned_object = false;
                         StateNameController.spawn_anything = true;
-                        StateNameController.what_to_spawn_string = "Tree";
+                        StateNameController.what_to_spawn_string = "Squirrel";
 
                     }
 
                 }
-            }
-            if (no_spawned_object)
-            {
-                SceneManager.LoadScene("interaction_scene");
-                StateNameController.what_to_spawn_string = "Nothing";
-                StateNameController.spawn_anything = false;
+                if (check_trees)
+                {
+                    print("WE GET HERE???23");
+                    foreach (GameObject Tree in GameObject.FindGameObjectsWithTag("Tree"))
+                    {
+                        Vector3 diff = Tree.transform.position - character.transform.position;
+                        print(diff);
+                        if (diff.sqrMagnitude < 200.0f)
+                        {
+                            print(Tree);
+                            SpawnTreeScene(Tree);
+                            no_spawned_object = false;
+                            StateNameController.spawn_anything = true;
+                            StateNameController.what_to_spawn_string = "Tree";
+
+                        }
+
+                    }
+                }
+                if (no_spawned_object)
+                {
+                    SceneManager.LoadScene("interaction_scene");
+                    StateNameController.what_to_spawn_string = "Nothing";
+                    StateNameController.spawn_anything = false;
 
 
+                }
             }
         }
     }

@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 8030626}
   - component: {fileID: 8030628}
   - component: {fileID: 8030629}
+  - component: {fileID: 8030630}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -362,6 +363,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
+--- !u!114 &8030630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85024040e751f413797df9812a19fa17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalBoss: {fileID: 6872254298673384916, guid: e5881f744b21a469f89a57709f99a8b5,
+    type: 3}
 --- !u!1001 &72685183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1204,6 +1219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 0}
   spawn_sound_effect: {fileID: 8300000, guid: 452d7935d469cf0418518892421aef5a, type: 3}
+  acorn_sound_effect: {fileID: 8300000, guid: c78fe23bfad604561a7cf9575060b306, type: 3}
   palm_tree_prefab: {fileID: 188006, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
   pine_tree_prefab: {fileID: 8848872821412255961, guid: 1e4f49afacfb1774db32a9b1f2e72e4a,
     type: 3}
@@ -3758,6 +3774,8 @@ MonoBehaviour:
   gameplay_canvas: {fileID: 1029568067}
   Squirrel__Object: {fileID: 8811883060664703749, guid: 7b663a12b0f0c477c8851d4018adf5ba,
     type: 3}
+  FinalBossObject: {fileID: 6872254298673384916, guid: e5881f744b21a469f89a57709f99a8b5,
+    type: 3}
   switchModeButton: {fileID: 1072080075}
   Squirrels: []
   Trees:
@@ -4110,6 +4128,7 @@ MonoBehaviour:
   acorn_prefab: {fileID: 1475821536407984857, guid: 74bbf03d5067f724bafb79d294e0d6da,
     type: 3}
   arCamera: {fileID: 0}
+  PewPewPew: {fileID: 8300000, guid: c78fe23bfad604561a7cf9575060b306, type: 3}
   acorn_launch_velocity: 2000
   offset: {x: 0, y: 0, z: 0}
 --- !u!224 &1172462472 stripped
@@ -5540,6 +5559,24 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bcf2964d9f5b42ddab1673bc862abde, type: 3}
+--- !u!1 &1452555945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7bcf2964d9f5b42ddab1673bc862abde,
+    type: 3}
+  m_PrefabInstance: {fileID: 1452555944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1452555946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452555945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406eda57be0c244c19376c2c3bf1d4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1463342670
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,6 +6622,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1254022646}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1931857877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1475821536407984857, guid: 74bbf03d5067f724bafb79d294e0d6da,
+    type: 3}
+  m_PrefabInstance: {fileID: 756137727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1931857880
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931857877}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!224 &1935873550 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5061533347895923541, guid: 00949d53d6083b545b1b5f9b6a27f081,

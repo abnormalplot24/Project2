@@ -12,6 +12,7 @@ public class InventorySystem : MonoBehaviour
     // Start is called before the first frame update
     public Transform cursor;
     public AudioClip spawn_sound_effect;
+    public AudioClip acorn_sound_effect;
     void Start()
     {
         Button inventoryButton = transform.Find("Viewport").Find("Content").Find("StreetTreeButton").GetComponent<Button>();
@@ -68,7 +69,7 @@ public class InventorySystem : MonoBehaviour
                 quantity_text.text = (float.Parse(quantity_text.text) - 1).ToString();
                 GameObject acornSpawner = GameObject.Find("AcornSpawner");
                 acornSpawner.GetComponent<AcornSpawner>().LaunchAcorn();
-                AudioSource.PlayClipAtPoint(spawn_sound_effect, Camera.main.transform.position);
+                AudioSource.PlayClipAtPoint(acorn_sound_effect, Camera.main.transform.position);
             }
         }
     }
