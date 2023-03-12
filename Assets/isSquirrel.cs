@@ -14,6 +14,7 @@ public class isSquirrel : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            print("KILL KILL KILL");
         }
     }
 }

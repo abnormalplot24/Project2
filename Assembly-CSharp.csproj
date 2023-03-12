@@ -320,6 +320,7 @@
     <Compile Include="Assets/other/Mapbox/Core/mapbox-sdk-cs/Utils/Vector2d/Mathd.cs" />
     <Compile Include="Assets/other/Mapbox/Core/mapbox-sdk-cs/Utils/BearingFilter.cs" />
     <Compile Include="Assets/other/Mapbox/Examples/Scripts/ObjectInspectorModifier.cs" />
+    <Compile Include="Assets/Spawner.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/DataContainers/ColliderOptions.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/DataContainers/MapOptions.cs" />
     <Compile Include="Assets/other/Mapbox/Core/mapbox-sdk-cs/Utils/UnixTimestampUtils.cs" />
@@ -410,6 +411,7 @@
     <Compile Include="Assets/other/Mapbox/Unity/Telemetry/TelemetryIos.cs" />
     <Compile Include="Assets/other/Mapbox/Core/mapbox-sdk-cs/Map/RetinaRasterTile.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs" />
+    <Compile Include="Assets/StateNameController.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/Utilities/VectorExtensions.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/SourceLayers/SubLayerCustomStyle.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/SourceLayers/SubLayerBehaviorModifiers.cs" />
@@ -452,8 +454,6 @@
     <Compile Include="Assets/other/Mapbox/Examples/1_DataExplorer/HighlightBuildings.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/Location/DeviceLocationProviderAndroidNative.cs" />
     <Compile Include="Assets/other/Mapbox/Unity/MeshGeneration/Factories/ImageDataFetcher.cs" />
-    <Compile Include="Assets/StateNameController.cs" />
-    <Compile Include="Assets/Spawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/other/TextMesh Pro/Shaders/TMPro.cginc" />
